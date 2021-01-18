@@ -1,14 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using System.Security.Cryptography;
 
-public class Controller : MonoBehaviour
+public class Controller
 {
-  /*
-   Controller has at least the following methods:
-- merge(Merge runes inventory)-> rune
-- purchase runes() -> 4 uncommon runes
-- Move(from inventory, to inventory, rune)
 
-   */
+    public RuneSO Merge(RuneSO[] runesToMerge)
+    {
+        
+        return null;
+    }
+
+    public void PurchaseRunes()
+    {
+        
+        // will return 4 random runes
+    }
+
+    public bool Move(RuneSO rune, MergeInvetory from, MergeInvetory to)
+    {
+        return false;
+    }
+
+    public bool AddToInventory(MergeInvetory to, RuneSO rune)
+    {
+        return false;
+    }
+
+    public void RemoveFromInventory(MergeInvetory mergeInvetory, RuneSO rune)
+    {
+        
+    }
+    
 }

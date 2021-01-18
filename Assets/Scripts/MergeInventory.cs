@@ -1,18 +1,34 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
-public class MergeInventory : MonoBehaviour
+public class MergeInventory
 {
-    // Start is called before the first frame update
-    void Start()
+    private Dictionary<RuneSO, int> _content;
+    
+    private RuneSO theRune; //temporary
+    
+    private int _capacity = 0;
+    private int _currentAmount = 0;
+    
+    
+    public bool TryToAddRune(RuneSO rune)
     {
-        
+        if (_currentAmount >= _capacity)
+            return false;
+            
+        if (_content.TryGetValue(theRune, out int currentAmount))
+        {
+            _content[theRune] = currentAmount + 1;
+        }
+        else
+        {
+            _content.Add(theRune, 1);
+        }
+        return true;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RemoveRune(RuneSO rune)
     {
-        
+
     }
+    
 }
