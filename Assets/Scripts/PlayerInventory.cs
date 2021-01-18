@@ -1,18 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class PlayerInventory : MonoBehaviour
+public class PlayerInventory
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // keep track of number of cards of each type list, dict, 
+    
+    // lookup tables
 }
