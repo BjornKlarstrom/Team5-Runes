@@ -7,6 +7,8 @@ public class MergeInventory
         _content = new Dictionary<RuneSO, int>();
         _capacity = capacity;
     }
+    
+    
     private Dictionary<RuneSO, int> _content;
     public Dictionary<RuneSO, int> Content => _content;
     
@@ -31,12 +33,19 @@ public class MergeInventory
         }
         return true;
     }
-
+    
     public void RemoveRune(RuneSO rune)
     {
         
     }
+
+    public void NotifyRuneChange(RuneSO rune)
+    {
+        rune.OnRuneMerged?.Invoke();
+    }
     
-    // TODO Notify view of update to model. (Event)
-    // interface remove this rune 
+    public void Clear()
+    {
+        
+    }
 }

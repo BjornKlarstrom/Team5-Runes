@@ -6,14 +6,9 @@ public class PlayerInventory
     {
         _content = new Dictionary<RuneSO, int>();
     }
-    // Notify view of update to model.
-    // keep track of number of cards of each type list, dict, 
 
-    // lookup tables
-    
     private Dictionary<RuneSO, int> _content;
     public Dictionary<RuneSO, int> Content => _content;
-    //public RuneSO theRune; //temporary
 
     public bool AddRune(RuneSO rune)
     {
@@ -24,6 +19,7 @@ public class PlayerInventory
         else
         {
             _content.Add(rune, 1);
+            
         }
         return true;
     }
@@ -36,6 +32,11 @@ public class PlayerInventory
     public void Clear()
     {
         
-    } 
-    // TODO Notify view of update to model. (Event)
+    }
+    
+    public void NotifyRuneChange(RuneSO rune, int newAmount)
+    {
+        rune.OnInventoryAmountChanged?.Invoke(newAmount);
+    }
+    
 }
