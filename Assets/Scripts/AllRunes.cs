@@ -3,5 +3,5 @@ using UnityEngine;
 
 public class AllRunes : MonoBehaviour
 {
-    [SerializeField] public List<RuneSO> allRunes;
+    public List<RuneSO> allRunes;
 }
