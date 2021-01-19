@@ -8,6 +8,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
 {
     [SerializeField] private Canvas _canvas;
     private RectTransform _rectTransform;
+    public RuneSO runeBeingDragged;
     
     private void Awake()
     {
