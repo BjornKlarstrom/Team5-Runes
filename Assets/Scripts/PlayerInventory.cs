@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-public class PlayerInventory {
+public class PlayerInventory : IInventory {
     public PlayerInventory() {
         _content = new Dictionary<RuneSO, int>();
     }

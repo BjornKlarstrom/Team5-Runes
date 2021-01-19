@@ -11,18 +11,17 @@ public class Controller
     {
         // will return 4 random runes
     }
-
-    public bool Move(RuneSO rune, PlayerInventory from, PlayerInventory to)
+    public bool Move(RuneSO rune, IInventory from, IInventory to)
     {
         return false;
     }
 
-    public bool AddToInventory(PlayerInventory to, RuneSO rune)
+    public bool AddToInventory(IInventory to, RuneSO rune)
     {
         return false;
     }
 
-    public void RemoveFromInventory(PlayerInventory playerInventory, RuneSO rune)
+    public void RemoveFromInventory(IInventory inventory, RuneSO rune)
     {
         
     }
