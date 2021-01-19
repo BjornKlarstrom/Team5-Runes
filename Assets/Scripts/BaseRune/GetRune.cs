@@ -1,48 +1,33 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-
+using Random = UnityEngine.Random;
 
 namespace BaseRune {
     public class GetRune : MonoBehaviour {
-        List<Rune> Inventory = new List<Rune>();
-        List<Rune> mergeRunes = new List<Rune>();
-        
+        [SerializeField] public InventorySO inventory;
+        private readonly List<RuneClass.Rune> _mergeRunes = new List<RuneClass.Rune>();
+
         void Start () {
             Button btn = GetComponent<Button>();
             btn.onClick.AddListener(TaskOnClick);
-            
-            mergeRunes.AddRange(new List<Rune> {
-                new Rune(Rune.RarityEnum.Uncommon, Rune.StatEnum.Strength),
-                new Rune(Rune.RarityEnum.Uncommon, Rune.StatEnum.Intelligence),
-                new Rune(Rune.RarityEnum.Uncommon, Rune.StatEnum.Agility),
-            });
-            
-            Rune mergedRune = Rune.Merge(mergeRunes);
-            Rune customRune = new Rune(Rune.RarityEnum.Uncommon, Rune.StatEnum.Intelligence);
-            Rune randomCommonRune = new Rune();
-            
-            Inventory.Add(mergedRune);
-            Inventory.Add(customRune);
-            Inventory.Add(randomCommonRune);
         }
 
-        void TaskOnClick(){ 
-            Debug.Log("test");
-            
-            Debug.Log(Inventory[0].Rarity);
-            Debug.Log(Inventory[0].Stat);
-            
-            Debug.Log("\n");
-            
-            Debug.Log(Inventory[1].Rarity);
-            Debug.Log(Inventory[1].Stat);
-            
-            Debug.Log("\n");
+        void TaskOnClick() {
+            AddRandomCommonRuneToInv(4);
+        }
 
-            Debug.Log(Inventory[2].Rarity);
-            Debug.Log(Inventory[2].Stat);
-
+        void AddRandomCommonRuneToInv(int amount) {
+            for (int i = 0; i < amount; i++) {
+                Array values = Enum.GetValues(typeof(RuneClass.Rune.StatEnum));
+                RuneClass.Rune.StatEnum randomStat = (RuneClass.Rune.StatEnum)values.GetValue(Random.Range(0, values.Length));
+                RuneClass.Rune randomCommonRune = new RuneClass.Rune(RuneClass.Rune.RarityEnum.Common, randomStat, 1);
+            
+                foreach (var rune in inventory.runes.Where(rune => rune.Rarity == randomCommonRune.Rarity && rune.Stat == randomCommonRune.Stat))
+                    rune.Amount++;
+            }
         }
     }
 }
