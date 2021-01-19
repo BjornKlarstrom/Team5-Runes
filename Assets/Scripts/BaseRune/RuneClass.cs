@@ -1,24 +1,28 @@
 using System;
+using System.Runtime.Serialization;
+using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace BaseRune {
-    public class RuneClass {
+    public class RuneClass : MonoBehaviour{
+        [Serializable]
         public class Rune {
             public enum RarityEnum { Common, Uncommon, Rare, Epic, Legendary }
             public enum StatEnum { Strength, Intelligence, Agility }
             public RarityEnum Rarity;
             public StatEnum Stat;
+            public int Amount;
         
             public Rune() {
-                Array values = Enum.GetValues(typeof(StatEnum));
-            
                 Rarity = RarityEnum.Common;
-                Stat = (StatEnum)values.GetValue(Random.Range(0, values.Length));
+                Stat = StatEnum.Strength;
+                Amount = 1;
             }
         
-            public Rune(RarityEnum rarity, StatEnum stat) {
+            public Rune(RarityEnum rarity, StatEnum stat, int amount) {
                 Rarity = rarity;
                 Stat = stat;
+                Amount = amount;
             }
         }
     }
