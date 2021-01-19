@@ -7,6 +7,10 @@ public class RuneSlot : MonoBehaviour, IDropHandler
 {
    public void OnDrop(PointerEventData eventData)
    {
-      Debug.Log("Dropped Rune");
+      if (eventData.pointerDrag != null)
+      {
+         eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition =
+            GetComponent<RectTransform>().anchoredPosition;
+      }
    }
 }
