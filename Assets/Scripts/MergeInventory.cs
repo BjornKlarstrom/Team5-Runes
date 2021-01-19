@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-public class MergeInventory {
+public class MergeInventory : IInventory {
     public MergeInventory(int capacity = 4) {
         _content = new Dictionary<RuneSO, int>();
         _capacity = capacity;

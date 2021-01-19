@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using UnityEngine;
 
 namespace Editor.Tests.Controller {
     
@@ -32,18 +33,30 @@ namespace Editor.Tests.Controller {
     public class PurchaseRunes {
         
         [Test]
-        public void PlaceholderTest() {
+        public void ReturnsFourRunes() {
             var controller = new global::Controller();
             Assert.AreEqual(true, false);
         }
+        
+        [Test]
+        public void RunesAreCommonQuality() {
+            var controller = new global::Controller();
+            Assert.AreEqual(true, false);
+        }
+        
     }
 
     public class Move {
         
         [Test]
-        public void PlaceholderTest() {
+        public void ToAndFromAreNotEqual() {
             var controller = new global::Controller();
-            Assert.AreEqual(true, false);
+            var playerInventory = new global::PlayerInventory();
+            var mergeInventory = new global::MergeInventory();
+            var runes = GameObject.FindObjectOfType<global::AllRunes>().allRunes;
+            //controller.Move(runes[0], inventory, inventory);
+            
+            Assert.AreEqual(playerInventory, mergeInventory);
         }
     }
 
