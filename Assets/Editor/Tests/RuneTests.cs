@@ -1,13 +1,12 @@
 using NUnit.Framework;
-using UnityEngine;
 
-namespace Editor.Tests.Rune {
+namespace Tests {
     
-    public class PlaceholderMethod {
+    public class RuneTest {
         
         [Test]
         public void PlaceholderTest() {
-            var controller = new global::Controller();
+            var controller = new Controller();
             Assert.AreEqual(true, false);
         }
     }    
