@@ -1,8 +1,11 @@
 ﻿using System;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using Debug = UnityEngine.Debug;
+using Random = System.Random;
 
 namespace BaseRune {
     public class Rune {
@@ -65,6 +68,9 @@ namespace BaseRune {
             Inventory.Add(customRune);
             Inventory.Add(randomCommonRune);
 
+            Debug.Log("test");
+                
+                
             Console.WriteLine(Inventory[0].Rarity);
             Console.WriteLine(Inventory[0].Stat);
             
