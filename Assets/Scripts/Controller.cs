@@ -29,32 +29,28 @@ public class Controller
     public void PickupRune(RuneSO rune, RuneSlot fromslot)
     {
         // From PlayerinventorySLot
-            //TODO remove 1x rune frominventory
-            //TODO Instantiate runeprefab on pointer
-            
+            //if (playerInventory > 1)
+                // TODO Instantiate runeDragNDropprefab on pointer
+            // TODO remove 1x rune from inventory
+
         // From Mergeslot
             //TODO remove rune from merge inventory
-            //TODO Instantiate runeprefab on pointer
     }
 
     public void DropRune(RuneSO droppedRune, RuneSlot dropSlot)
     {
         // Mergeslot -> Mergeslot
-            // handle dropSlot empty
-                // Destroy prefab
-                // TODO Add rune to dropslot
-                // TODO Add rune to Merge Inventory
-            // handle dropSlot occupied
-                //TODO Remove rune from DragDrop
-                //TODO Add 
-                
-        // Playerslot -> Mergeslot
-            // dropslot empty
-                // TODO Remove rune from DragDrop, Add Rune To Dropslot, add rune to merge inventory.
-            // dropslot occupied
-                // TODO Remove Dropslot.rune from merge inventory.
-                // TODO Add Dropslot.rune to player inventory
-                // TODO add DragDrop.rune to merge inventory
-    }    
+            // if dropSlot empty
+                // TODO Add droppedRune to Merge Inventory
+            // if dropSlot occupied
+                // TODO Add droppedRune to Merge Inventory
+                // TODO Remove Rune sitting in occupying prefab from merge inventory
+                // TODO Swap prefab on drop slot with prefab in hand
+    }
+
+    public void DropRuneOutsideDropslot(RuneSO rune)
+    {
+        //TODO add 1x rune to player inventory 
+    }
 
 }
