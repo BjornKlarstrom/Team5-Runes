@@ -29,6 +29,16 @@ public class MergeInventory {
 
         return true;
     }
+    
+    public void NotifyRuneChange(RuneSO rune)
+    {
+        rune.OnRuneMerged?.Invoke();
+    }
+    
+    public void Clear()
+    {
+        
+    }
 
     public void RemoveRune(RuneSO rune) {
         if (_content.TryGetValue(rune, out int currentAmount)) {
@@ -39,9 +49,7 @@ public class MergeInventory {
         } else {
             return;
         }
-
     }
 
-    // TODO Notify view of update to model. (Event)
-    // interface remove this rune 
 }
+
