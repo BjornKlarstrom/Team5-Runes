@@ -30,11 +30,6 @@ public class MergeInventory {
         return true;
     }
     
-    public void RemoveRune(RuneSO rune)
-    {
-        
-    }
-
     public void NotifyRuneChange(RuneSO rune)
     {
         rune.OnRuneMerged?.Invoke();

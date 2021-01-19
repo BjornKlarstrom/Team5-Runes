@@ -14,9 +14,7 @@ public class PlayerInventory {
             _content[rune] = currentAmount + 1;
         } else {
             _content.Add(rune, 1);
-            
         }
-
         return true;
     }
 
@@ -33,10 +31,6 @@ public class PlayerInventory {
     public void Clear() {
     }
     
-    public void Clear()
-    {
-        
-    }
     
     public void NotifyRuneChange(RuneSO rune, int newAmount)
     {
