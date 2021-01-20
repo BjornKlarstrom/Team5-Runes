@@ -19,6 +19,7 @@ namespace BaseRune {
         }
 
         public void Create() {
+            if (ManipulateInventory.FindRuneInInv(_dragAbleRuneData, _checkRuneAmount.inventorySO).Amount <= 0) return;
             var go = Instantiate(_dragAbleGameObjectPrefab, transform);
             _runeSlot.dragSlot = go.GetComponent<DragDrop>();
             _runeSlot.dragSlot.currentRuneSlot = gameObject;

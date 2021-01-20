@@ -15,7 +15,7 @@ MonoBehaviour:
   runes:
   - Rarity: 0
     Stat: 0
-    Amount: 2
+    Amount: 3
   - Rarity: 0
     Stat: 1
     Amount: 0

@@ -20,6 +20,8 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         set {
             if (currentRuneSlot != null && _mergeSlot == false) 
                 currentRuneSlot.GetComponent<RuneSlot>().Start();
+            if (currentRuneSlot.transform.childCount == 0)
+                currentRuneSlot.GetComponent<RuneSlot>().dragSlot = null;
             currentRuneSlot = value;
         } 
     }

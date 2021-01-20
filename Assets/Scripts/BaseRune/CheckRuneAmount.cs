@@ -23,7 +23,7 @@ namespace BaseRune {
         }
 
         private void Update() {
-            displayAmount.text = inventorySO.runes[_invIndex].Amount > 1 ? inventorySO.runes[_invIndex].Amount.ToString() : "";
+            displayAmount.text = inventorySO.runes[_invIndex].Amount > 0 ? (inventorySO.runes[_invIndex].Amount).ToString() : "";
             
             _amount = inventorySO.runes[_invIndex].Amount;
             inventorySO.runes[_invIndex].Amount = math.max(inventorySO.runes[_invIndex].Amount, 0);
