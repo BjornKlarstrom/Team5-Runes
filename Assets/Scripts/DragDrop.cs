@@ -9,12 +9,23 @@ using UnityEngine.EventSystems;
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler {
     [SerializeField] public Canvas _canvas;
     [SerializeField] public RuneClass.Rune dragAbleRuneData;
-    public GameObject prevRuneSlot;
+    
     private RectTransform _rectTransform;
     private CanvasGroup _canvasGroup;
     private float _speed = 1500f;
-    
+    private bool _mergeSlot = true;
+    public GameObject currentRuneSlot;
+    public GameObject CurrentRuneSlot {
+        get => currentRuneSlot;
+        set {
+            if (currentRuneSlot != null && _mergeSlot == false) 
+                currentRuneSlot.GetComponent<RuneSlot>().Start();
+            currentRuneSlot = value;
+        } 
+    }
+
     private void Awake() {
+        _mergeSlot = gameObject.GetComponentInParent<RuneSlot>().mergeSlot;
         _rectTransform = GetComponent<RectTransform>();
         _canvasGroup = GetComponent<CanvasGroup>();
     }
