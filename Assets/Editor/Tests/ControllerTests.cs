@@ -49,16 +49,18 @@ namespace Tests {
         }
 
         public class Move {
+            IInventory _playerInventory;
+            IInventory _mergeInventory;
+
+            [SetUp]
+            public void BeforeEveryTest() {
+                _playerInventory = new PlayerInventory();
+                _mergeInventory = new MergeInventory();
+            }
 
             [Test]
-            public void ToAndFromAreNotEqual() {
-                var controller = new Controller();
-                var playerInventory = new PlayerInventory();
-                var mergeInventory = new MergeInventory();
-                var runes = GameObject.FindObjectOfType<AllRunes>().allRunes;
-                //controller.Move(runes[0], inventory, inventory);
-
-                Assert.AreEqual(playerInventory, mergeInventory);
+            public void InventoriesAreNotEqual() {
+                Assert.AreNotEqual(_playerInventory, _mergeInventory);
             }
         }
 
