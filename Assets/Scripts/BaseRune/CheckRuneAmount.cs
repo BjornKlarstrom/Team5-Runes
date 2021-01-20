@@ -15,9 +15,6 @@ namespace BaseRune
         private int _amount = 0;
         private int _invIndex;
 
-        public RuneClass.Rune acceptableRune;
-
-
         private void Start() {
             _hideImage = gameObject.GetComponent<Image>();
 

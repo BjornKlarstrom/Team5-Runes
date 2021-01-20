@@ -8,7 +8,8 @@ using UnityEngine.EventSystems;
 [RequireComponent(typeof(CanvasGroup))]
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    [SerializeField] private Canvas _canvas;
+    [SerializeField] public Canvas _canvas;
+    [SerializeField] public RuneClass.Rune dragableRuneData;
     private RectTransform _rectTransform;
     private CanvasGroup _canvasGroup;
     private float _speed = 1500f;
