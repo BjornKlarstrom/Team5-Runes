@@ -12,8 +12,9 @@ GameObject:
   - component: {fileID: 7857824928605758380}
   - component: {fileID: 7857824928605758381}
   - component: {fileID: 7857824928605758378}
+  - component: {fileID: 4473511916095667595}
   m_Layer: 0
-  m_Name: StrengthCommonSlot
+  m_Name: RuneSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,14 +90,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0191e5fc4e8b2e4b914ff120cbcfb2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragableGameObjectPrefab: {fileID: 8497136654109195476, guid: 98eb9c83a6681a34fbd1fc5149e002c0,
+  _inv: {fileID: 0}
+  _dragAbleGameObjectPrefab: {fileID: 8497136654109195476, guid: 98eb9c83a6681a34fbd1fc5149e002c0,
     type: 3}
-  dragableSprite: {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37, type: 3}
-  dragableRuneData:
+  _dragAbleSprite: {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37, type: 3}
+  _dragAbleRuneData:
     Rarity: 0
     Stat: 0
     Amount: 1
-  _canvas: {fileID: 0}
+  _mainCanvas: {fileID: 0}
+--- !u!114 &4473511916095667595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7857824928605758376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853cdbf295a62d045ab3c21bfa085166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inv: {fileID: 0}
+  acceptableRune:
+    Rarity: 0
+    Stat: 0
+    Amount: 1
+  mergeSlot: 0
+  dragSlot: {fileID: 0}
 --- !u!1001 &5517021893446456357
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ namespace BaseRune {
             Rune.RarityEnum baseRarity = runes[0].Rarity;
 
             int chanceForUpgrade = runes.Count switch {2 => 20, 3 => 55, 4 => 95, _ => 0};
+            
             if (Random.Range(0, 100) < chanceForUpgrade && Enum.GetNames(typeof(Rune.RarityEnum)).Length != (int)runes[0].Rarity)
                 baseRarity = (Rune.RarityEnum)Enum.GetValues(typeof(Rune.RarityEnum)).GetValue((int)baseRarity + 1);
             
