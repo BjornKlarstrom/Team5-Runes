@@ -108,7 +108,7 @@ namespace Tests {
             public void FromMergeslotToMergeslotSameRune() // rune with same rarity and same stat
             {
                 runeSlotTo.currentRune = rune0;
-                dragDrop.runeBeingDragged = rune0;
+                //dragDrop.runeBeingDragged = rune0;
 
                 controller.DropRune(rune0, runeSlotTo);
                 // merge inventory unchanged
