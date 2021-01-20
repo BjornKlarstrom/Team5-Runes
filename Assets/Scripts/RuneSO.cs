@@ -9,15 +9,15 @@ public class RuneSO : ScriptableObject
     public UnityAction OnRuneMerged;
 
     [SerializeField] private string _name;
-    [SerializeField] private Sprite _sprite;
     [SerializeField] private RarityEnum _rarity;
     [SerializeField] private RuneColorSO _rarityColor;
+    [SerializeField] private RuneSpriteSO _runeSprite;
     [SerializeField] private StatEnum _stat;
     public string Name => _name;
-    public Sprite Sprite => _sprite;
     public RarityEnum Rarity => _rarity;
 
     public Color RarityColor => _rarityColor.GetRarityColor(Rarity);
+    public Sprite Sprite => _runeSprite.LookupSprite(_stat);
     public StatEnum Stat => _stat;
     
     public enum StatEnum { Strength, Intelligence, Agility }

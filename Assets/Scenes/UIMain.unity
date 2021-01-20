@@ -271,6 +271,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvas: {fileID: 1174180100}
   runeBeingDragged: {fileID: 11400000, guid: c14ebe7badee3094a99663604424aa2d, type: 2}
+--- !u!223 &43353511
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43353509}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!225 &43353513
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -283,6 +304,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &43353515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43353509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &48529440
 GameObject:
   m_ObjectHideFlags: 0
@@ -2567,6 +2605,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458355794}
     m_Modifications:
+    - target: {fileID: 286490783330131047, guid: 45268049d797f24438b0ead3af83363d,
+        type: 3}
+      propertyPath: runeSO
+      value: 
+      objectReference: {fileID: 11400000, guid: dd59dae0c748f624989becded91353b9,
+        type: 2}
     - target: {fileID: 1750169354581755713, guid: 45268049d797f24438b0ead3af83363d,
         type: 3}
       propertyPath: m_Name
@@ -2886,6 +2930,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8996439855291832893, guid: d5506feb5706289438119d1a6b30003b,
+        type: 3}
+      propertyPath: runeSO
+      value: 
+      objectReference: {fileID: 11400000, guid: 177e1eda2ab99a2488ca3a804ac9fe82,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 6266120460199242521, guid: d5506feb5706289438119d1a6b30003b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d5506feb5706289438119d1a6b30003b, type: 3}
@@ -3436,6 +3486,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvas: {fileID: 1174180100}
   runeBeingDragged: {fileID: 11400000, guid: 177e1eda2ab99a2488ca3a804ac9fe82, type: 2}
+--- !u!223 &1720831142
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720831140}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!225 &1720831144
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3448,6 +3519,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1720831146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720831140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!224 &1734960923 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3572478986276034799, guid: d5506feb5706289438119d1a6b30003b,
@@ -3474,6 +3562,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _canvas: {fileID: 1174180100}
   runeBeingDragged: {fileID: 11400000, guid: dd59dae0c748f624989becded91353b9, type: 2}
+--- !u!223 &1774363760
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774363758}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 1
+  m_TargetDisplay: 0
 --- !u!225 &1774363762
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -3486,6 +3595,23 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1774363764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774363758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &1828992800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4179,6 +4305,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 118996394}
     m_Modifications:
+    - target: {fileID: 763601764790708958, guid: bc1158e19a3fa5e4ab88e24b4043a534,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1750169354581755713, guid: bc1158e19a3fa5e4ab88e24b4043a534,
         type: 3}
       propertyPath: m_Name
@@ -4289,6 +4420,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6803279013213376654, guid: bc1158e19a3fa5e4ab88e24b4043a534,
+        type: 3}
+      propertyPath: runeSO
+      value: 
+      objectReference: {fileID: 11400000, guid: c14ebe7badee3094a99663604424aa2d,
+        type: 2}
     m_RemovedComponents:
     - {fileID: 6266120460199242521, guid: bc1158e19a3fa5e4ab88e24b4043a534, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bc1158e19a3fa5e4ab88e24b4043a534, type: 3}
