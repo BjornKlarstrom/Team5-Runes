@@ -15,10 +15,10 @@ MonoBehaviour:
   runes:
   - Rarity: 0
     Stat: 0
-    Amount: 13
+    Amount: 2
   - Rarity: 0
     Stat: 1
-    Amount: 15
+    Amount: 6
   - Rarity: 0
     Stat: 2
-    Amount: 24
+    Amount: 11
