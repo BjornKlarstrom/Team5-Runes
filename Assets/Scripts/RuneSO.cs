@@ -11,10 +11,13 @@ public class RuneSO : ScriptableObject
     [SerializeField] private string _name;
     [SerializeField] private Sprite _sprite;
     [SerializeField] private RarityEnum _rarity;
+    [SerializeField] private RuneColorSO _rarityColor;
     [SerializeField] private StatEnum _stat;
     public string Name => _name;
     public Sprite Sprite => _sprite;
     public RarityEnum Rarity => _rarity;
+
+    public Color RarityColor => _rarityColor.GetRarityColor(Rarity);
     public StatEnum Stat => _stat;
     
     public enum StatEnum { Strength, Intelligence, Agility }
