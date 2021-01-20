@@ -19,7 +19,7 @@ namespace BaseRune
             inventory.runes.Clear();
         }
 
-        private static RuneClass.Rune FindRuneInInv(RuneClass.Rune findRune, InventorySO inventory) {
+        public static RuneClass.Rune FindRuneInInv(RuneClass.Rune findRune, InventorySO inventory) {
             return inventory.runes.FirstOrDefault(rune => rune.Rarity == findRune.Rarity && rune.Stat == findRune.Stat);
         }
     }

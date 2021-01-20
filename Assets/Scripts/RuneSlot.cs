@@ -12,28 +12,31 @@ public class RuneSlot : MonoBehaviour, IDropHandler, IPointerDownHandler {
    public DragDrop dragSlot;
 
    public void Start() {
-      if(mergeSlot == false) gameObject.GetComponent<CreateDragAble>().Create();
+      if (mergeSlot || ManipulateInventory.FindRuneInInv(acceptableRune, inv).Amount <= 0) return;
+      ManipulateInventory.Remove(acceptableRune, inv);
+      gameObject.GetComponent<CreateDragAble>().Create();
+
    }
 
 
    public void OnPointerDown(PointerEventData eventData) {
       if (mergeSlot || dragSlot != null) return;
       
-      /*
-      var dragDrop = eventData.hovered.Find(gameObject => gameObject != null && gameObject.GetComponent<RuneSlot>() != null);
-      dragDrop.GetComponent<CreateDragAble>().Create();
-      */
    }
    
    public void OnDrop(PointerEventData eventData) {
       if (eventData.pointerDrag == null) return;
       var dragDrop = eventData.pointerDrag.GetComponent<DragDrop>();
 
-      if (dragDrop.dragAbleRuneData.Rarity == acceptableRune.Rarity && dragDrop.dragAbleRuneData.Stat == acceptableRune.Stat || mergeSlot) {
-         if (!mergeSlot) Destroy(dragSlot.gameObject);
+      if (dragDrop.dragAbleRuneData.Rarity == acceptableRune.Rarity && dragDrop.dragAbleRuneData.Stat == acceptableRune.Stat || mergeSlot)
+      {
 
-         eventData.pointerDrag.GetComponent<Transform>().position = this.transform.position;
-         eventData.pointerDrag.transform.SetParent(transform);
+         if (!mergeSlot) Debug.Log(dragSlot.gameObject);
+         if (!mergeSlot) Destroy(dragSlot.gameObject);
+         
+         dragDrop.CurrentRuneSlot = gameObject;
+         dragDrop.GetComponent<Transform>().position = transform.position;
+         dragDrop.transform.SetParent(transform);
          
          if (dragSlot == null) dragSlot = dragDrop;
 

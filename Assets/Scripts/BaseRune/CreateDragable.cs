@@ -21,7 +21,7 @@ namespace BaseRune {
         public void Create() {
             var go = Instantiate(_dragAbleGameObjectPrefab, transform);
             _runeSlot.dragSlot = go.GetComponent<DragDrop>();
-
+            _runeSlot.dragSlot.currentRuneSlot = gameObject;
             _runeSlot.dragSlot._canvas = _mainCanvas;
             _runeSlot.dragSlot.dragAbleRuneData = _dragAbleRuneData;
             _runeSlot.dragSlot.GetComponent<Image>().sprite = _dragAbleSprite;
