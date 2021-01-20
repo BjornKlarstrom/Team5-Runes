@@ -12,7 +12,8 @@ public class RuneSlot : MonoBehaviour, IDropHandler, IPointerDownHandler {
    public DragDrop dragSlot;
 
    public void Start() {
-      if(mergeSlot == false) gameObject.GetComponent<CreateDragAble>().Create();
+      Debug.Log(gameObject.GetComponent<CreateDragAble>());
+      if (mergeSlot == false) gameObject.GetComponent<CreateDragAble>().Create();
    }
 
 

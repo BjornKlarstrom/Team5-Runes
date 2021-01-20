@@ -107,7 +107,7 @@ namespace Tests {
             [Test]
             public void FromMergeslotToMergeslotSameRune() // rune with same rarity and same stat
             {
-                runeSlotTo.currentRune = rune0;
+                //runeSlotTo.currentRune = rune0;
                 //dragDrop.runeBeingDragged = rune0;
 
                 controller.DropRune(rune0, runeSlotTo);
