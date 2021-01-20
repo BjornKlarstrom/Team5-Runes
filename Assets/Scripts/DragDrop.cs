@@ -9,7 +9,6 @@ using UnityEngine.EventSystems;
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     [SerializeField] private Canvas _canvas;
-    public InventorySO InventorySO;
     private RectTransform _rectTransform;
     private CanvasGroup _canvasGroup;
     private float _speed = 1500f;
