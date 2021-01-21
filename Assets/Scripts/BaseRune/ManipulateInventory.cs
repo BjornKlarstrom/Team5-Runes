@@ -15,8 +15,7 @@ namespace BaseRune
             rune.Amount++;
         }
         
-        public static void Remove(RuneClass.Rune removeRune, InventorySO inventory)
-        {
+        public static void Remove(RuneClass.Rune removeRune, InventorySO inventory) {
             var rune = FindRuneInInv(removeRune, inventory);
             if (rune != null) rune.Amount--;
         }
