@@ -1,61 +1,40 @@
-using System;
-using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace BaseRune {
     public class CreateDragAble : MonoBehaviour {
         [SerializeField] private GameObject _dragAbleGameObjectPrefab;
-        [SerializeField] private Sprite _dragAbleSprite;
-        [SerializeField] private RuneClass.Rune _dragAbleRuneData; 
+        [SerializeField] private List<RuneClass.Rune> _dragAbleRuneData; 
         [SerializeField] private Canvas _mainCanvas;
+        [SerializeField] private bool mergeSlot = false;
         private CheckRuneAmount _checkRuneAmount;
         private RuneSlot _runeSlot;
 
 
         private void Awake() {
-            _checkRuneAmount = GetComponentInChildren<CheckRuneAmount>();
             _runeSlot = GetComponent<RuneSlot>();
+            if (mergeSlot) return;
+            _checkRuneAmount = GetComponentInChildren<CheckRuneAmount>();
         }
+        public void CustomCreate(InventorySO inv = null) {
+            if (!mergeSlot && ManipulateInventory.FindRuneInInv(_dragAbleRuneData[0], _checkRuneAmount.inventorySO).Amount <= 0) return;
+            if (mergeSlot) _dragAbleRuneData[0] = inv.runes[0];
 
-        public void Create() {
-            if (ManipulateInventory.FindRuneInInv(_dragAbleRuneData, _checkRuneAmount.inventorySO).Amount <= 0) return;
             var go = Instantiate(_dragAbleGameObjectPrefab, transform);
             _runeSlot.dragSlot = go.GetComponent<DragDrop>();
             _runeSlot.dragSlot.currentRuneSlot = gameObject;
-            _runeSlot.dragSlot._canvas = _mainCanvas;
-            _runeSlot.dragSlot.dragAbleRuneData = _dragAbleRuneData;
-            _runeSlot.dragSlot.GetComponent<Image>().sprite = _dragAbleSprite;
+            _runeSlot.dragSlot.canvas = _mainCanvas;
+            _runeSlot.dragSlot.dragAbleRuneData = _dragAbleRuneData[0];
         }
-        
 
+        public void Update() {
+            if (mergeSlot) return;
 
-            /*
-            if (transform.childCount <= 2 && _checkRuneAmount._amount > 0) {
-                if (GetComponentInChildren<DragDrop>() != null && _checkRuneAmount._amount <= 0) return;
-                var go = Instantiate(dragableGameObjectPrefab, transform);
-                var goData = go.GetComponent<DragDrop>();
-                
-                goData._canvas = _mainCanvas;
-                goData.dragableRuneData = dragableRuneData;
-                goData.GetComponent<Image>().sprite = dragableSprite;
-                
-                /*
-                foreach (var rune in inv.runes.Where(rune => rune.Rarity == goData.dragableRuneData.Rarity && rune.Stat == goData.dragableRuneData.Stat))
-                    rune.Amount--;
-                    
-            }
-            else {
-                if (GetComponentInChildren<DragDrop>() != null) {
-                    var go = GetComponentInChildren<DragDrop>();
-                    /*
-                    foreach (var rune in inv.runes.Where(rune => rune.Rarity == go.dragableRuneData.Rarity && rune.Stat == go.dragableRuneData.Stat))
-                        rune.Amount++;
-                    
-                    
-                }
-            }
-            */
+            if (_checkRuneAmount._amount > 0 && _runeSlot.dragSlot == null) CustomCreate();
+            else if (_checkRuneAmount._amount <= 0 && _runeSlot.transform.childCount > 1) 
+                Destroy(GetComponentInChildren<DragDrop>().gameObject);
+        }
     }
 }
 

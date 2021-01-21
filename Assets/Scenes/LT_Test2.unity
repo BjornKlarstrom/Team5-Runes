@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9003450}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2144484590}
+        m_TargetAssemblyTypeName: BaseRune.MergeController, Assembly-CSharp
+        m_MethodName: UpdateListAndInv
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &9003450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1322,6 +1334,7 @@ GameObject:
   - component: {fileID: 650344834}
   - component: {fileID: 650344837}
   - component: {fileID: 650344836}
+  - component: {fileID: 650344838}
   - component: {fileID: 650344835}
   m_Layer: 0
   m_Name: MergeResultSlot
@@ -1349,19 +1362,25 @@ RectTransform:
   m_AnchoredPosition: {x: 230, y: 4}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!65 &650344835
-BoxCollider:
+--- !u!114 &650344835
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650344833}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853cdbf295a62d045ab3c21bfa085166, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inv: {fileID: 0}
+  acceptableRune:
+    Rarity: 0
+    Stat: 0
+    Amount: 1
+  mergeSlot: 1
+  dragSlot: {fileID: 0}
 --- !u!114 &650344836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1400,6 +1419,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650344833}
   m_CullTransparentMesh: 1
+--- !u!114 &650344838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650344833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0191e5fc4e8b2e4b914ff120cbcfb2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dragAbleGameObjectPrefab: {fileID: 8497136654109195476, guid: 98eb9c83a6681a34fbd1fc5149e002c0,
+    type: 3}
+  _dragAbleRuneData:
+  - Rarity: 0
+    Stat: 0
+    Amount: 0
+  _mainCanvas: {fileID: 1174180100}
+  mergeSlot: 1
 --- !u!1 &656369421
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,6 +1674,11 @@ PrefabInstance:
       propertyPath: _dragAbleRuneData.Stat
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _dragAbleRuneData.Array.data[0].Stat
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7857824928605758379, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1828,6 +1872,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888419679}
   m_CullTransparentMesh: 1
+--- !u!1 &1021889294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7857824927809683386, guid: e706f2cd55252f0498d3057b8256268a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1563632507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1021889298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021889294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!1 &1123705685
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,6 +2064,11 @@ PrefabInstance:
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleRuneData.Stat
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _dragAbleRuneData.Array.data[0].Stat
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7857824928605758379, guid: e706f2cd55252f0498d3057b8256268a,
@@ -2558,6 +2630,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8903869135281255178, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e706f2cd55252f0498d3057b8256268a, type: 3}
 --- !u!224 &1563632508 stripped
@@ -2961,6 +3038,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2144484589}
+  - component: {fileID: 2144484590}
   m_Layer: 5
   m_Name: MergeSlotHolder
   m_TagString: Untagged
@@ -2991,3 +3069,19 @@ Transform:
   m_Father: {fileID: 1200034551}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2144484590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144484588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f236b5556dbbbb9488b106c22357772d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mergeInv: {fileID: 11400000, guid: f8143633f7a66cc4bb3705ba30f77e0b, type: 2}
+  mergeResultInv: {fileID: 11400000, guid: b21a0b41f261d7a49af77d42359714d2, type: 2}
+  runeSlots: []
+  createAtSlot: {fileID: 2144484588}

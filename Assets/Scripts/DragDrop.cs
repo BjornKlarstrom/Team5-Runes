@@ -1,33 +1,38 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using BaseRune;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(CanvasGroup))]
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler {
-    [SerializeField] public Canvas _canvas;
+    [SerializeField] public Canvas canvas;
     [SerializeField] public RuneClass.Rune dragAbleRuneData;
     
     private RectTransform _rectTransform;
     private CanvasGroup _canvasGroup;
     private float _speed = 1500f;
-    private bool _mergeSlot = true;
+    public bool onMergeSlot;
     public GameObject currentRuneSlot;
     public GameObject CurrentRuneSlot {
         get => currentRuneSlot;
         set {
-            if (currentRuneSlot != null && _mergeSlot == false) 
+            onMergeSlot = gameObject.GetComponentInParent<RuneSlot>().mergeSlot;
+            if (currentRuneSlot != null) {
+                Debug.Log(currentRuneSlot);
+                Debug.Log(currentRuneSlot.transform.childCount);
+            }
+            
+            currentRuneSlot.GetComponent<RuneSlot>().dragSlot = null;
+            
+            if (currentRuneSlot != null && !onMergeSlot) 
                 currentRuneSlot.GetComponent<RuneSlot>().Start();
-            if (currentRuneSlot.transform.childCount == 0)
-                currentRuneSlot.GetComponent<RuneSlot>().dragSlot = null;
+            
             currentRuneSlot = value;
         } 
     }
 
     private void Awake() {
-        _mergeSlot = gameObject.GetComponentInParent<RuneSlot>().mergeSlot;
+        onMergeSlot = gameObject.GetComponentInParent<RuneSlot>().mergeSlot;
         _rectTransform = GetComponent<RectTransform>();
         _canvasGroup = GetComponent<CanvasGroup>();
     }
@@ -38,7 +43,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     }
 
     public void OnDrag(PointerEventData eventData) {
-        _rectTransform.anchoredPosition += eventData.delta / _canvas.scaleFactor;
+        _rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
     }
 
     public void OnEndDrag(PointerEventData eventData) {
@@ -52,11 +57,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     public void OnPointerDown(PointerEventData eventData) {
 
     }
-
-
-    public void RemoveDragAbleFromSlot() {
-        
-    }
+    
     public IEnumerator MoveToPreviousSlot() {
         while ((transform.parent.position - transform.position).magnitude > 2f) {
             Vector3 dir = (transform.parent.position - transform.position).normalized;

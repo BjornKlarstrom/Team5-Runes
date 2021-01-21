@@ -1,9 +1,6 @@
-using System;
-using System.Collections.Generic;
 using BaseRune;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using System.Linq;
 
 public class RuneSlot : MonoBehaviour, IDropHandler, IPointerDownHandler {
    [SerializeField]private InventorySO inv;
@@ -15,11 +12,10 @@ public class RuneSlot : MonoBehaviour, IDropHandler, IPointerDownHandler {
    public void Start() {
       if (mergeSlot || ManipulateInventory.FindRuneInInv(acceptableRune, inv).Amount <= 0) return;
       ManipulateInventory.Remove(acceptableRune, inv);
-      gameObject.GetComponent<CreateDragAble>().Create();
+      gameObject.GetComponent<CreateDragAble>().CustomCreate();
    }
    
    public void OnPointerDown(PointerEventData eventData) {
-      if (mergeSlot || dragSlot != null) return;
    }
    
    public void OnDrop(PointerEventData eventData) {
@@ -47,7 +43,7 @@ public class RuneSlot : MonoBehaviour, IDropHandler, IPointerDownHandler {
 
    private void CheckForDuplicate() {
       var go = GetComponentsInChildren<DragDrop>();
-      for (int i = 1; i < go.Length; i++) {
+      for (int i = 0; i < go.Length; i++) {
          Destroy(go[i].gameObject);
       }
    }

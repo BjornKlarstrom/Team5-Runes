@@ -90,12 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0191e5fc4e8b2e4b914ff120cbcfb2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inv: {fileID: 0}
   _dragAbleGameObjectPrefab: {fileID: 8497136654109195476, guid: 98eb9c83a6681a34fbd1fc5149e002c0,
     type: 3}
-  _dragAbleSprite: {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37, type: 3}
   _dragAbleRuneData:
-    Rarity: 0
+  - Rarity: 0
     Stat: 0
     Amount: 1
   _mainCanvas: {fileID: 0}

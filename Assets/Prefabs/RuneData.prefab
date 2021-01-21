@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2422087833081867160}
   - component: {fileID: 2422087833081867162}
   - component: {fileID: 2422087833081867161}
+  - component: {fileID: 3963312684273575727}
   m_Layer: 5
   m_Name: Amount
   m_TagString: Untagged
@@ -79,6 +80,27 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
+--- !u!223 &3963312684273575727
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2422087833081867167}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 1
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 2
+  m_TargetDisplay: 0
 --- !u!1 &4167278588681665261
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +219,8 @@ MonoBehaviour:
   draggableObject: {fileID: 8497136654109195476, guid: 98eb9c83a6681a34fbd1fc5149e002c0,
     type: 3}
   displayAmount: {fileID: 2422087833081867161}
-  checkForRune:
+  checkThisRune:
     Rarity: 0
     Stat: 0
     Amount: 1
+  _amount: 0
