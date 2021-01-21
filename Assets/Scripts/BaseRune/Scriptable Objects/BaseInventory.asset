@@ -15,10 +15,46 @@ MonoBehaviour:
   runes:
   - Rarity: 0
     Stat: 0
-    Amount: 4
-  - Rarity: 0
-    Stat: 1
     Amount: 0
   - Rarity: 0
+    Stat: 1
+    Amount: 12
+  - Rarity: 0
+    Stat: 2
+    Amount: 13
+  - Rarity: 1
+    Stat: 0
+    Amount: 0
+  - Rarity: 4
+    Stat: 0
+    Amount: 0
+  - Rarity: 3
+    Stat: 0
+    Amount: 0
+  - Rarity: 2
+    Stat: 0
+    Amount: 0
+  - Rarity: 4
+    Stat: 1
+    Amount: 0
+  - Rarity: 3
+    Stat: 1
+    Amount: 0
+  - Rarity: 2
+    Stat: 1
+    Amount: 0
+  - Rarity: 1
+    Stat: 1
+    Amount: 0
+  - Rarity: 4
+    Stat: 2
+    Amount: 0
+  - Rarity: 3
+    Stat: 2
+    Amount: 1
+  - Rarity: 2
+    Stat: 2
+    Amount: 1
+  - Rarity: 1
     Stat: 2
     Amount: 0
