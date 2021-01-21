@@ -12,24 +12,22 @@ namespace BaseRune
         [SerializeField] public GameObject createAtSlot;
 
         public void UpdateListAndInv() {
-            runeSlots.Clear(); 
+            runeSlots.Clear();
             ManipulateInventory.Clear(mergeInv);
 
             foreach (var slot in GetComponentsInChildren<RuneSlot>())
                 if (slot.dragSlot != null) {
-                    Debug.Log("added Bby");
                     runeSlots.Add(slot);
                     ManipulateInventory.Add(slot.dragSlot.dragAbleRuneData, mergeInv, true); 
                 }
             
-            if(mergeInv.runes.Count >= 2)
+            if(mergeInv.runes.Count >= 2 && mergeInv.runes.Count <= 4)
                 MergeRunes();
         }
         
         public void MergeRunes() { 
             var baseRarity = mergeInv.runes[0].Rarity;
-            Debug.Log( "merge count: " + mergeInv.runes.Count);
-            int chanceForUpgrade = mergeInv.runes.Count switch {2 => 20, 3 => 55, 4 => 95, _ => 0};
+            int chanceForUpgrade = mergeInv.runes.Count switch {2 => 20, 3 => 55, 4 => 95, _ => 100};
             
             if (Random.Range(0, 100) < chanceForUpgrade && Enum.GetNames(typeof(RuneClass.Rune.RarityEnum)).Length != (int)mergeInv.runes[0].Rarity) 
                 baseRarity = (RuneClass.Rune.RarityEnum)Enum.GetValues(typeof(RuneClass.Rune.RarityEnum)).GetValue((int)baseRarity + 1);
@@ -42,8 +40,7 @@ namespace BaseRune
             if (mergeResultInv.runes.Count <= 0) return;
             createAtSlot.GetComponent<CreateDragAble>().CustomCreate(mergeResultInv);
             
-            runeSlots.Clear(); 
-            ManipulateInventory.Clear(mergeInv);
+            runeSlots.Clear();
             ManipulateInventory.Clear(mergeResultInv);
         }
 

@@ -17,11 +17,6 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         get => currentRuneSlot;
         set {
             onMergeSlot = gameObject.GetComponentInParent<RuneSlot>().mergeSlot;
-            if (currentRuneSlot != null) {
-                Debug.Log(currentRuneSlot);
-                Debug.Log(currentRuneSlot.transform.childCount);
-            }
-            
             currentRuneSlot.GetComponent<RuneSlot>().dragSlot = null;
             
             if (currentRuneSlot != null && !onMergeSlot) 

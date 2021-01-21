@@ -284,13 +284,36 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: StrengthCommonSlot (4)
+      value: StrengthLS
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
       value: 
       objectReference: {fileID: 1174180100}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleRuneData.Array.data[0].Rarity
@@ -530,6 +553,7 @@ MonoBehaviour:
     Stat: 0
     Amount: 1
   mergeSlot: 1
+  dontAcceptRune: 0
   dragSlot: {fileID: 0}
 --- !u!1 &151899055
 GameObject:
@@ -992,6 +1016,7 @@ MonoBehaviour:
     Stat: 0
     Amount: 1
   mergeSlot: 1
+  dontAcceptRune: 0
   dragSlot: {fileID: 0}
 --- !u!1 &488909442
 GameObject:
@@ -1087,6 +1112,7 @@ MonoBehaviour:
     Stat: 0
     Amount: 1
   mergeSlot: 1
+  dontAcceptRune: 0
   dragSlot: {fileID: 0}
 --- !u!224 &518984181 stripped
 RectTransform:
@@ -1548,6 +1574,7 @@ MonoBehaviour:
     Stat: 0
     Amount: 1
   mergeSlot: 1
+  dontAcceptRune: 0
   dragSlot: {fileID: 0}
 --- !u!1 &650344833
 GameObject:
@@ -1606,6 +1633,7 @@ MonoBehaviour:
     Stat: 0
     Amount: 1
   mergeSlot: 1
+  dontAcceptRune: 1
   dragSlot: {fileID: 0}
 --- !u!114 &650344836
 MonoBehaviour:
@@ -1659,6 +1687,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _dragAbleGameObjectPrefab: {fileID: 8497136654109195476, guid: 98eb9c83a6681a34fbd1fc5149e002c0,
     type: 3}
+  _sprite:
+  - {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37, type: 3}
+  - {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60, type: 3}
+  - {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635, type: 3}
+  colors: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5, type: 2}
   _dragAbleRuneData:
   - Rarity: 0
     Stat: 0
@@ -1759,6 +1792,7 @@ MonoBehaviour:
     Stat: 0
     Amount: 1
   mergeSlot: 1
+  dontAcceptRune: 0
   dragSlot: {fileID: 0}
 --- !u!224 &745515157 stripped
 RectTransform:
@@ -1860,6 +1894,7 @@ MonoBehaviour:
     Stat: 0
     Amount: 1
   mergeSlot: 1
+  dontAcceptRune: 0
   dragSlot: {fileID: 0}
 --- !u!1001 &880372526
 PrefabInstance:
@@ -1893,8 +1928,20 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: IntelligenceCommonSlot (3)
+      value: IntelligenceES
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
@@ -1903,6 +1950,17 @@ PrefabInstance:
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
+        type: 3}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
         type: 3}
@@ -2065,8 +2123,20 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: IntelligenceCommonSlot
+      value: IntelligenceCS
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
@@ -2075,6 +2145,17 @@ PrefabInstance:
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
+        type: 3}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
         type: 3}
@@ -2337,13 +2418,36 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: StrengthCommonSlot (1)
+      value: StrengthUS
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
       value: 
       objectReference: {fileID: 1174180100}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleRuneData.Array.data[0].Rarity
@@ -2641,8 +2745,20 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: AgillityCommonSlot (2)
+      value: AgillityRS
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
@@ -2651,6 +2767,17 @@ PrefabInstance:
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
+        type: 3}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
         type: 3}
@@ -2812,14 +2939,31 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 7857824927851187706, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824927851187706, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
       propertyPath: m_SortingLayerID
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: AgillityCommonSlot
+      value: AgillityCS
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
@@ -2828,6 +2972,17 @@ PrefabInstance:
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
+        type: 3}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
         type: 3}
@@ -3170,8 +3325,20 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: IntelligenceCommonSlot (1)
+      value: IntelligenceUC
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
@@ -3180,6 +3347,17 @@ PrefabInstance:
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
+        type: 3}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
         type: 3}
@@ -3409,6 +3587,7 @@ MonoBehaviour:
     Stat: 0
     Amount: 1
   mergeSlot: 1
+  dontAcceptRune: 0
   dragSlot: {fileID: 0}
 --- !u!224 &1261879005 stripped
 RectTransform:
@@ -3532,8 +3711,20 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: AgillityCommonSlot (3)
+      value: AgillityES
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
@@ -3542,6 +3733,17 @@ PrefabInstance:
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
+        type: 3}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
         type: 3}
@@ -3727,13 +3929,36 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: StrengthCommonSlot (2)
+      value: StrengthRS
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
       value: 
       objectReference: {fileID: 1174180100}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleRuneData.Array.data[0].Rarity
@@ -3878,13 +4103,36 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: StrengthCommonSlot
+      value: StrengthCS
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
       value: 
       objectReference: {fileID: 1174180100}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37,
+        type: 3}
     - target: {fileID: 7857824928605758379, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Pivot.x
@@ -4041,8 +4289,20 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: IntelligenceCommonSlot (2)
+      value: IntelligenceRS
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
@@ -4051,6 +4311,17 @@ PrefabInstance:
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
+        type: 3}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
         type: 3}
@@ -4218,8 +4489,20 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: IntelligenceCommonSlot (4)
+      value: IntelligenceLS
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
@@ -4228,6 +4511,17 @@ PrefabInstance:
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
+        type: 3}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 4ed8935e80419194ca10fec786f4de60,
         type: 3}
@@ -4480,8 +4774,20 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: AgillityCommonSlot (4)
+      value: AgillityLS
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
@@ -4490,6 +4796,17 @@ PrefabInstance:
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
+        type: 3}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
         type: 3}
@@ -4667,8 +4984,20 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: AgillityCommonSlot (1)
+      value: AgillityUC
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
@@ -4677,6 +5006,17 @@ PrefabInstance:
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
+        type: 3}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
       value: 
       objectReference: {fileID: 21300000, guid: 7ef11ab836e2bbc4a90e3c6c3baa4635,
         type: 3}
@@ -5128,6 +5468,7 @@ MonoBehaviour:
     Stat: 0
     Amount: 1
   mergeSlot: 1
+  dontAcceptRune: 0
   dragSlot: {fileID: 0}
 --- !u!1001 &2080340438
 PrefabInstance:
@@ -5156,13 +5497,36 @@ PrefabInstance:
     - target: {fileID: 7857824928605758376, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: m_Name
-      value: StrengthCommonSlot (3)
+      value: StrengthEC
       objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: colors
+      value: 
+      objectReference: {fileID: 11400000, guid: 3231abd46509d9540ba4ab5e96c40bb5,
+        type: 2}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _mainCanvas
       value: 
       objectReference: {fileID: 1174180100}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
+        type: 3}
+      propertyPath: _sprite.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d075c69f3c5fe7429eea2cd303f2e37,
+        type: 3}
     - target: {fileID: 7857824928605758378, guid: e706f2cd55252f0498d3057b8256268a,
         type: 3}
       propertyPath: _dragAbleRuneData.Array.data[0].Rarity

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de24696ed14bbcf49bfb3c089e179a86, type: 3}
   m_Name: RarityColors
   m_EditorClassIdentifier: 
-  _commonColor: {r: 1, g: 0, b: 0, a: 1}
+  _commonColor: {r: 0.8207547, g: 0.43747774, b: 0.43747774, a: 1}
   _uncommonColor: {r: 0.44499823, g: 0.754717, b: 0.4652618, a: 1}
-  _rareColor: {r: 0.03646585, g: 0, b: 0.9150943, a: 1}
+  _rareColor: {r: 0.26580516, g: 0.26099145, b: 0.6509434, a: 1}
   _epicColor: {r: 0.21052866, g: 0.7830189, b: 0.6377044, a: 1}
   _legendaryColor: {r: 0.745283, g: 0.7235201, b: 0.05273228, a: 1}

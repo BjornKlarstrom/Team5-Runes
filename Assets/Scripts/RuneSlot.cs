@@ -6,6 +6,7 @@ public class RuneSlot : MonoBehaviour, IDropHandler, IPointerDownHandler {
    [SerializeField]private InventorySO inv;
    [SerializeField]private RuneClass.Rune acceptableRune;
    [SerializeField]public bool mergeSlot;
+   [SerializeField]public bool dontAcceptRune = false;
    public DragDrop dragSlot;
    
 
@@ -22,8 +23,8 @@ public class RuneSlot : MonoBehaviour, IDropHandler, IPointerDownHandler {
       if (eventData.pointerDrag == null) return;
       var dragDrop = eventData.pointerDrag.GetComponent<DragDrop>();
 
-      if (dragDrop.dragAbleRuneData.Rarity == acceptableRune.Rarity && dragDrop.dragAbleRuneData.Stat == acceptableRune.Stat || mergeSlot) {
-         if (mergeSlot && dragSlot != null) {
+      if (dragDrop.dragAbleRuneData.Rarity == acceptableRune.Rarity && dragDrop.dragAbleRuneData.Stat == acceptableRune.Stat || mergeSlot){
+         if (mergeSlot && dragSlot != null || dontAcceptRune) {
             StartCoroutine(dragDrop.MoveToPreviousSlot());
             return;
          }

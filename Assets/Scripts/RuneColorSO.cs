@@ -6,16 +6,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/RuneColor")]
 public class RuneColorSO : ScriptableObject
 {
-    [SerializeField] private Color _commonColor;
-    [SerializeField] private Color _uncommonColor;
-    [SerializeField] private Color _rareColor;
-    [SerializeField] private Color _epicColor;
-    [SerializeField] private Color _legendaryColor;
+    [SerializeField] public Color _commonColor;
+    [SerializeField] public Color _uncommonColor;
+    [SerializeField] public Color _rareColor;
+    [SerializeField] public Color _epicColor;
+    [SerializeField] public Color _legendaryColor;
 
     public Color GetRarityColor(RuneSO.RarityEnum rarity)
     {
-        return rarity switch
-        {
+        return rarity switch {
             RuneSO.RarityEnum.Common => _commonColor,
             RuneSO.RarityEnum.Uncommon => _uncommonColor,
             RuneSO.RarityEnum.Rare => _rareColor,
